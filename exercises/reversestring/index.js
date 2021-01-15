@@ -8,11 +8,27 @@
 
 function reverse(str) {
     let res = "";
-    for(let i = str.length - 1; i >= 0; i--){
-        res = res.concat(str[i]);
+    for(let char of str){
+        res = char + res;
     }
 
     return res;
 }
 
 module.exports = reverse;
+
+
+//OTHER POSSIBLE SOLUTIONS:
+
+//  function reverse(str){
+//      return str
+//         .split('')
+//         .reverse()
+//         .join('');
+//  }
+
+// function reverse(str){
+//     return str.split('').reduce((reversed, char) => {
+//         return char + reversed;
+//     }, '')
+// }
